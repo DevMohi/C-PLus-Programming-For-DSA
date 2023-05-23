@@ -10,7 +10,7 @@ int* get_array(int n){
     return a;
 }
 
-
+//C
 int main(){
     int n;
     cin>>n;
