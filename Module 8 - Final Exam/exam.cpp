@@ -1,3 +1,43 @@
+// // // // replace it 
+
+// #include <iostream>
+// #include <string>
+
+// using namespace std;
+
+// int main() {
+//     int t;
+//     cin >> t;
+
+//     for (int i = 0; i < t; i++) {
+//         string s, x;
+//         cin >> s >> x;
+
+//         int xLength = x.size();
+//         int n = 0;
+
+//         for (int i = 0; i < s.size(); i++) {
+//             if (s[i] == x[n]) {
+//                 n++;
+//                 if (n == xLength) {
+//                     int pos = i - n + 1;
+//                     s.replace(pos, x.size(), "$");
+//                     n = 0;
+//                 }
+//             } 
+//             else {
+//                 n = 0; 
+//             }
+//         }
+//         cout <<s<< endl;
+//     }
+//     return 0;
+// }
+
+
+
+
+
 // // // replace it 
 
 #include <iostream>
@@ -7,33 +47,21 @@ using namespace std;
 
 int main() {
     int t;
-    cin >> t;
-
-    for (int i = 0; i < t; i++) {
+    cin>>t;
+    for(int i=0; i<t; i++){
         string s, x;
         cin >> s >> x;
+        //meaning find jotokkon pabe search korbe
 
-        int xLength = x.size();
-        int n = 0;
-
-        for (int i = 0; i < s.size(); i++) {
-            if (s[i] == x[n]) {
-                n++;
-                if (n == xLength) {
-                    int pos = i - n + 1;
-                    s.replace(pos, x.size(), "$");
-                    n = 0;
-                }
-            } 
-            else {
-                n = 0; 
-            }
+        while(s.find(x)!=-1){
+            s.replace(s.find(x),x.size(),"$");
         }
-
-        cout << s << endl;
+        cout<<s<<endl;
     }
+
     return 0;
 }
+
 
 // //Find Ratul
 
